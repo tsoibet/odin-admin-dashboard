@@ -91,6 +91,10 @@ li svg {
     gap: 1rem;
 }
 
+#header-top svg {
+    height: 1.3rem;
+}
+
 #search-bar {
     background-color: var(--theme-bg-color);
     border-radius: 1rem;
