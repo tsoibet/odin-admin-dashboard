@@ -95,11 +95,26 @@ li svg {
     height: 1.3rem;
 }
 
-#search-bar {
-    background-color: var(--theme-bg-color);
-    border-radius: 1rem;
+input[type=search] {
+    -webkit-appearance: none;
+    appearance: none;
+
     width: 80%;
     height: 1.6rem;
+
+    background-color: var(--theme-bg-color);
+    border-radius: 1rem;
+    border-style: none;
+    padding: 0 0.9rem;
+    font-size: 0.8rem;
+}
+
+input[type=search]:focus {
+    outline-style: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
 }
 
 #header-bottom {
