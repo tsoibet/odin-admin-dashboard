@@ -11,6 +11,8 @@
     --theme-accent-color: rgb(255, 198, 13);
     --theme-content-color: rgb(119, 119, 119);
     --theme-shadow-color: rgb(185, 185, 185);
+    --theme-button-hover-color: rgb(57, 169, 235);
+    --theme-card-hover-color: rgb(255, 211, 65);
 }
 
 #container {
@@ -19,6 +21,8 @@
 }
 
 #sidebar {
+    z-index: 2;
+
     background-color: var(--theme-color);
     color: white;
     padding: 1rem;
@@ -33,6 +37,7 @@
 }
 
 #logo {
+    cursor: pointer;
     font-size: 1.3rem;
 
     display: grid;
@@ -50,18 +55,21 @@ ul {
 
     display: grid;
     grid-template-columns: repeat(auto-fit, 100%);
-    gap: 1rem;
-}
-
-.menu {
-    padding: 0 1rem;
 }
 
 .menu li {
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
     display: grid;
     grid-template-columns: repeat(2, min-content);
     gap: 1rem;
     align-items: center;
+}
+
+.menu li:hover {
+    background-color: var(--theme-button-hover-color);
 }
 
 li svg {
@@ -69,6 +77,9 @@ li svg {
 }
 
 #header {
+    z-index: 1;
+
+    box-shadow: 0 0.1rem 5px var(--theme-shadow-color);
     padding: 1rem 2rem;
     font-weight: bold;
 
@@ -86,6 +97,14 @@ li svg {
 
 #header-top svg {
     height: 1.3rem;
+}
+
+#alarm {
+    cursor: pointer;
+}
+
+#alarm:hover {
+    color: var(--theme-accent-color);
 }
 
 #search-group {
@@ -178,11 +197,16 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #header-bottom .button {
+    cursor: pointer;
     background-color: var(--theme-color);
     color: white;
     border-radius: 1.5rem;
     padding: 0.4rem 1.2rem;
     font-size: 0.8rem;
+}
+
+#header-bottom .button:hover {
+    background-color: var(--theme-button-hover-color);
 }
 
 #board {
@@ -229,6 +253,10 @@ input[type="search"]::-webkit-search-cancel-button {
     gap: 0.2rem;
 }
 
+#projects .card:hover {
+    border-left: 0.5rem solid var(--theme-card-hover-color);
+}
+
 #projects .card .content {
     max-height: 200px;
     overflow: scroll;
@@ -240,7 +268,13 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #projects svg {
+    cursor: pointer;
+    border-radius: 1rem;
     height: 1rem;
+}
+
+#projects svg:hover {
+    color: var(--theme-card-hover-color);
 }
 
 #projects .title {
@@ -285,6 +319,10 @@ input[type="search"]::-webkit-search-cancel-button {
     display: grid;
     grid-template-columns: repeat(auto-fit, 100%);
     gap: 1rem;
+}
+
+#trending .user {
+    cursor: pointer;
 }
 
 #trending .user-id,
